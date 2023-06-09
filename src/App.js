@@ -15,25 +15,24 @@ import  ListComponent  from './components/ListComponent.jsx'
 function App() {
 
   const titulos = [
-    'Administracion de Pymes',
-    'Diseño Grafico Publicitario',
-    'Diseño Tecnico Industrial',
-    'Marketing Digital'
+    { tituloCurso: 'Administracion de Pymes', filtro: 'adm'},
+    { tituloCurso: 'Diseño Grafico Publicitario', filtro: 'dgp'},
+    { tituloCurso: 'Diseño Tecnico Industrial', filtro: 'dti'},
+    { tituloCurso: 'Marketing Digital', filtro: 'mkt'},    
+    { tituloCurso: 'Secretariado Ejecutivo', filtro: 'sec'},    
+    { tituloCurso: 'Diagnostico y Mantenimiento de PC', filtro: 'dym'},    
   ]
 
-  const adm = 'adm'
-  const dgp = 'dgp'
-  const dti = 'dti'
-  const mkt = 'mkt'
 
   return (
     <main>
       <h1>Listado El Trebol</h1>
-    
-      <ListComponent curso={adm} titulo={titulos[0]} />
-      <ListComponent curso={dgp} titulo={titulos[1]} />
-      <ListComponent curso={dti} titulo={titulos[2]} />
-      <ListComponent curso={mkt} titulo={titulos[3]} />
+
+      {
+        titulos.map( titulo => {
+          return <ListComponent curso={titulo.filtro} titulo={titulo.tituloCurso} />
+        } )
+      }
       
     </main>
   );

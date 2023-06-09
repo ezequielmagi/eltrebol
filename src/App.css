@@ -24,11 +24,25 @@ body{
 }
 
 #alumnosAdmList header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
     width: 100%;
-    padding: 0 1rem;
-    text-align: right;
+    padding: 1rem;
     font-size: 2rem;
+    cursor: pointer;
+}
+#alumnosAdmList header p{
+    width: 100%;
+    padding: 0 1rem;
+    text-align: left;
+    font-size: 1rem;
+}
+
+#alumnosAdm ol{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 #alumnosAdm ol li{

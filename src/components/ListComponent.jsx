@@ -14,9 +14,9 @@ const ListComponent = ( props ) => {
     
   return (
     <article id='alumnosAdm'>
-        <h2>Listado alumnos de {props.titulo}:</h2>
+        
           <article id='alumnosAdmList'>
-            <header> { openTab ? '' : 'open' } <span id='openCloseBtn' onClick={openCloseList}> { openTab ? '-' : '+' } </span> </header>
+            <header> { openTab ? <p>Listado alumnos de {props.titulo}:</p> : <p>Listado alumnos de {props.titulo}:</p> } <span id='openCloseBtn' onClick={openCloseList}> { openTab ? '-' : '+' } </span> </header>
             <ol className={ openTab ? 'open' : 'hide'  }>
               {
                 alumnosAdm.map( alumno => {
